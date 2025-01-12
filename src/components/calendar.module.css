@@ -1,0 +1,40 @@
+.calendar{
+  .fc .fc-button-primary:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: none;
+  }
+
+  :root{
+    --fc-button-bg-color:#ff6f61;
+    --fc-button-border-color: none;
+    --fc-button-hover-bg-color:#e55b50;
+    --fc-button-hover-border-color:none;
+    --fc-button-active-bg-color:#e55b50;
+    --fc-button-active-border-color:none;
+  }
+
+  :global(.fc-day:not(.fc-day-other):not(.fc-day-past) > .fc-daygrid-day-frame) {
+    
+    &:after{
+      content: 'Reservar';
+      margin: 0 auto;
+
+      font-size:12px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 5px 7.55px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+
+      position: absolute;
+      bottom: 5px;
+      display: inline-block;
+      left: calc(50% - 30px)
+    }
+
+    &:hover:after {
+      background-color:#e55b50;
+    }
+  }
+}

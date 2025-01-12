@@ -1,0 +1,166 @@
+body {
+  font-family: Nunito, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('ruta/a/tu/imagen-de-fiesta.jpg'); /* Cambia esta ruta por la de tu imagen */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+header {
+  background-color: rgba(255, 111, 97); /* Fondo semitransparente para destacar el texto */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  position: sticky;
+  top: -90px;
+  z-index: 10;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff6f61;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para mejorar la legibilidad */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ff6f61;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form button, form select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e55b50;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.9); /* Fondo semitransparente */
+  color: white;
+}
+
+#eventos {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.evento {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.evento h3 {
+  color: #ff6f61;
+  margin-top: 0;
+}
+
+.evento p {
+  margin: 5px 0;
+}
+
+.evento button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.evento button:hover {
+  background-color: #e55b50;
+}
+
+.fc .fc-button-primary:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+  box-shadow: none;
+}
+
+:root{
+  --fc-button-bg-color:#ff6f61;
+  --fc-button-border-color: none;
+  --fc-button-hover-bg-color:#e55b50;
+  --fc-button-hover-border-color:none;
+  --fc-button-active-bg-color:#e55b50;
+  --fc-button-active-border-color:none;
+}
+
+#inicio {
+  text-align: justify;
+  p, li {
+    padding:0.2rem
+  }  
+}
+
+#contacto {
+  div{display: flex; justify-content: space-around; padding: 0 10%;}
+  ul{ margin: auto; width:fit-content; text-align: justify}
+  p, li {
+    padding:0.2rem
+  }  
+  sup {font-size:0.7rem;}
+}
+#tarifas {
+  & > div{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 10%; margin-bottom: 3rem;} 
+  ul{ margin: auto; width:fit-content; text-align: justify; li {padding: 0.5rem;}}
+}
+
+#equipamiento{
+  ul{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem;}
+  li{margin: 0 auto; width:50%; text-align: justify; }
+}
