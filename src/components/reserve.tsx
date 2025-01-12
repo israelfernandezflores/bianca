@@ -72,7 +72,7 @@ const ReserveInner = ({onSubmit}: ReserveProps, outerRef: React.ForwardedRef<Par
                       disabled={
                         (horaMin ?? 0) >= hour ||
                         
-                        hour > new Date(events.filter(ev => new Date(ev.start).getHours() > (horaMin ?? 0)).at(0)?.start).getHours()
+                        hour > new Date(events.filter(ev => new Date(ev.start).getHours() > (horaMin ?? 0)).at(0)?.start ?? NaN).getHours()
                       }
                     >{hour}:00</option>
                   )}
