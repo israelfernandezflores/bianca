@@ -1,4 +1,3 @@
-import "./App.css";
 //import ReactConfetti from "react-confetti";
 import Calendar from "./components/calendar";
 import { Reserve } from "./components/reserve";

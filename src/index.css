@@ -138,29 +138,29 @@ footer {
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
-}
 
-.evento h3 {
-  color: #ff6f61;
-  margin-top: 0;
-}
+  h3 {
+    color: #ff6f61;
+    margin-top: 0;
+  }
 
-.evento p {
-  margin: 5px 0;
-}
+  p {
+    margin: 5px 0;
+  }
 
-.evento button {
-  background-color: #ff6f61;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+  button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
 
-.evento button:hover {
-  background-color: #e55b50;
+  button:hover {
+    background-color: #e55b50;
+  }
 }
 
 .fc .fc-button-primary:focus, .fc .fc-button-primary:not(:disabled):active:focus {
