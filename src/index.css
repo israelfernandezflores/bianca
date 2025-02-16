@@ -1,35 +1,74 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Nunito, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url('ruta/a/tu/imagen-de-fiesta.jpg'); /* Cambia esta ruta por la de tu imagen */
-  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-  background-position: center;
-  background-repeat: no-repeat;
   color: #333;
 }
 
 header {
-  background-color: rgba(255, 111, 97); /* Fondo semitransparente para destacar el texto */
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+  @apply bg-[#ff6f61] text-white py-2.5 sticky rounded-b-lg text-2xl z-10 flex flex-col gap-8 md:top-[-190px] p-0.5 h-dvh md:h-auto;
   font-family: 'Pacifico', cursive;
-  position: sticky;
-  top: -90px;
-  z-index: 10;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+
+  .header-title {
+    @apply grow flex flex-col md:flex-row items-center justify-center gap-4 w-full;
+  
+  h1 {
+    @apply text-4xl order-1;
+  }
+
+  div { 
+    @apply grow flex items-center md:grow-0;
+    img {
+      @apply h-auto md:h-40;
+    }
+  }}
+}
+
+.chevron { 
+  @apply rounded-md drop-shadow-2xl;
+  
+  display: inline-block;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+
+  animation-name: chevron-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  
+}
+.chevron2{
+  animation-delay:0.5s;
+  margin-top: -10px;
+}
+
+@keyframes chevron-animation {
+  0% { 
+    transform: translatey(-10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+    transform: translatey(0px) rotate(45deg);
+  }
 }
 
 h2 {
+  @apply text-[#ff6f61] text-2xl pb-8;
   font-family: 'Pacifico', cursive;
-  color: #ff6f61;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+  @apply list-none p-0;
 }
 
 nav ul li {
@@ -43,10 +82,7 @@ nav ul li a {
 }
 
 section {
-  padding: 2rem;
-  margin: 2rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para mejorar la legibilidad */
-  border-radius: 8px;
+  @apply p-8 m-2 bg-[rgba(255_255_255_0.8)] rounded-lg shadow-md;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -148,19 +184,48 @@ footer {
 }
 
 #contacto {
-  div{display: flex; justify-content: space-around; padding: 0 10%;}
-  ul{ margin: auto; width:fit-content; text-align: justify}
+  div{
+    display: flex; 
+    flex-flow: column;
+    justify-content: space-around; 
+    //padding: 0 10%;
+  }
+
+  ul{ 
+    margin: auto; 
+    width:100%; 
+    text-align: left;
+  }
+
   p, li {
     padding:0.2rem
   }  
   sup {font-size:0.7rem;}
 }
 #tarifas {
-  & > div{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 10%; margin-bottom: 3rem;} 
-  ul{ margin: auto; width:fit-content; text-align: justify; li {padding: 0.5rem;}}
+  & > div{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    //padding: 0 10%; 
+    margin-bottom: 3rem;
+    text-align: left;
+  } 
+  ul{ 
+    margin: auto; 
+    width:fit-content; 
+    //text-align: justify; 
+    text-align: left;
+    li {padding: 0.5rem;}
+  }
 }
 
 #equipamiento{
-  ul{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem;}
-  li{margin: 0 auto; width:50%; text-align: justify; }
+  ul{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(140px, 1fr)); 
+    gap: 1rem;
+  }
+  li{margin: 0 auto; 
+    width:100%; 
+    text-align: justify; }
 }

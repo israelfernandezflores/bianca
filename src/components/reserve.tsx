@@ -29,7 +29,7 @@ const ReserveInner = ({onSubmit}: ReserveProps, outerRef: React.ForwardedRef<Par
   return (
     <dialog ref={dialogRef}>
       <form method="dialog" onSubmit={onSubmit} onReset={closeReserve}>
-        <section style={{display: 'grid', gridTemplateColumns: '2fr 3fr'}}>
+        <section className={styles['reserve-wrapper']}>
           <Day onClick={()=>console.log('day click')} events={events} date={date} />
           <div className={styles['reserve-form']} style={{display: 'flex', flexFlow: 'column'}}>
             <label className=""> Nombre
