@@ -280,9 +280,10 @@ footer {
 }
 
 dialog:-internal-dialog-in-top-layer {
+  @apply w-auto h-full md:w-[900px];
+
   max-width: 100%;
   max-height: 100%;
-  width: 900px;
   position: fixed;
   inset-block-start: 0px;
   inset-block-end: 0px;
@@ -292,6 +293,7 @@ dialog:-internal-dialog-in-top-layer {
   margin: auto;
   padding-bottom: 8px;
 }
+
 @media (width >= 48rem) {
   dialog:-internal-dialog-in-top-layer {
     max-width: calc(100% - 2em - 6px);
@@ -301,7 +303,7 @@ dialog:-internal-dialog-in-top-layer {
 
 .reserve-wrapper {
   @apply grid gap-4;
-  grid-template-columns: repeat(2, minmax(203px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(203px, 1fr));
 
   .fc-header-toolbar {
     text-align: center;
