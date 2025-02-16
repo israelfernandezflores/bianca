@@ -186,8 +186,8 @@ footer {
 
 #contacto {
   div{
-    @apply grid bg-red-200; 
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    @apply grid gap-1; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   }
 
   ul{ 
