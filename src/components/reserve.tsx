@@ -1,6 +1,6 @@
 import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from "react"
 import Day from "./day";
-import styles from './reserve.module.css'
+//import styles from './reserve.module.css'
 
 export type ReserveProps = {
   onSubmit?: () => void
@@ -29,9 +29,9 @@ const ReserveInner = ({onSubmit}: ReserveProps, outerRef: React.ForwardedRef<Par
   return (
     <dialog ref={dialogRef}>
       <form method="dialog" onSubmit={onSubmit} onReset={closeReserve}>
-        <section className={styles['reserve-wrapper']}>
+        <section className="reserve-wrapper">
           <Day onClick={()=>console.log('day click')} events={events} date={date} />
-          <div className={styles['reserve-form']} style={{display: 'flex', flexFlow: 'column'}}>
+          <div className="reserve-form" style={{display: 'flex', flexFlow: 'column'}}>
             <label className=""> Nombre
               <input name="nombre" />
             </label>

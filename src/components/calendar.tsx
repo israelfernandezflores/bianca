@@ -4,7 +4,7 @@ import esLocale from '@fullcalendar/core/locales/es';
 import interactionPlugin, { type DateClickArg } from "@fullcalendar/interaction"
 import { EventAddArg, type EventContentArg } from '@fullcalendar/core/index.js';
 //import EventViewPlugin from './event';
-import styles from './calendar.module.css'
+//import styles from './calendar.module.css'
 
 function renderEventContent(eventInfo:  EventContentArg) {
   return(
@@ -19,7 +19,7 @@ function renderEventContent(eventInfo:  EventContentArg) {
 
 export default function Calendar({events, onClick}: {events:{ title: string; start: string; end: string;}[], onClick?: ((arg: DateClickArg) => void) }) {
   return (
-    <div className={styles.calendar}><FullCalendar
+    <div className="calendar"><FullCalendar
       plugins={[ dayGridPlugin, interactionPlugin ]}
       events={events}
       eventTimeFormat={{

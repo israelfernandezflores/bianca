@@ -88,7 +88,7 @@ function App() {
         <section id="inicio">
           <h2>¡Celebra con nosotros!</h2>
           <p>
-            ¡Descubre la <b>Sala Munich</b>, el lugar perfecto para tus
+            ¡Descubre la <b>Sala Tokio</b>, el lugar perfecto para tus
             celebraciones en Torrejón de Ardoz! Si buscas un espacio para
             fiestas que combine comodidad y diversión, nuestra sala es la
             elección ideal tanto para cumpleaños de niños como para eventos de
@@ -98,7 +98,7 @@ function App() {
           </p>
 
           <p>
-            En la <b>Sala Munich</b>, no solo te proporcionamos un espacio
+            En la <b>Sala Tokio</b>, no solo te proporcionamos un espacio
             excepcional, sino que también te ofrecemos la opción de contratar
             servicios adicionales. Desde catering y decoración hasta animación,
             nuestros proveedores de confianza se encargarán de cada detalle para
@@ -146,7 +146,7 @@ function App() {
           </ul>
 
           <p>
-            ¡Ven y celebra con nosotros en la <b>Sala Munich</b>, donde cada
+            ¡Ven y celebra con nosotros en la <b>Sala Tokio</b>, donde cada
             detalle está pensado para que tu evento sea inolvidable!
           </p>
         </section>
@@ -299,7 +299,7 @@ function App() {
 
         <footer>
           <p>
-            &copy; 2025 Sala de Fiestas Munich. Todos los derechos reservados.
+            &copy; 2025 Sala de Fiestas Tokio. Todos los derechos reservados.
           </p>
         </footer>
       </div>
