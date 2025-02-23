@@ -329,3 +329,38 @@ dialog:-internal-dialog-in-top-layer {
     }
   }
 }
+
+.fc-daygrid-body{
+  z-index: 0 !important;  
+}
+
+.menu-button {
+  @apply fixed top-4 right-4 z-110 rounded w-10 h-10 flex flex-col gap-2 bg-amber-50 border border-[#ff6f61] p-2 md:hidden;
+
+  div {
+    @apply w-[22px];
+    transition: transform 0.5s ease-out, width 0.3s ease-out;
+  }
+
+  &:has(:checked) {    
+    div {
+      @apply invisible w-0;
+      transform-origin: top left;
+    }
+
+    div:first-of-type{
+      @apply visible w-[29px];
+      transform: rotate(45deg);
+    }
+
+    div:last-of-type{
+      @apply visible w-[29px];
+      transform: rotate(-45deg);
+      transform-origin: top left;
+    }    
+  }
+}
+
+.menu-button:not(:has(:checked))+nav {
+  @apply hidden md:block;
+}

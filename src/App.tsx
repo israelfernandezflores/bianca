@@ -4,6 +4,9 @@ import { Reserve } from "./components/reserve";
 import { useCallback, useMemo, useRef } from "react";
 import { DateClickArg } from "@fullcalendar/interaction/index.js";
 import FacebookPage from "./components/facebook-page";
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+import 'react-whatsapp-widget/dist/index.css';
+
 
 function App() {
   const reserveDialog = useRef<
@@ -55,8 +58,18 @@ function App() {
           <div className="header-title"><h1 className="py-2">Bienvenidos</h1>
           <div className="px-4"><img src="/logo.jpg" alt="Sala Tokio" className="rounded-md"/></div></div>
 
-          <nav className="hidden md:block">
-            <ul >
+          <label className="menu-button">
+            <input type="checkbox" className="hidden" id="menu-button" />
+            <div className="border border-[#ff6f61]"></div>
+            <div className="border border-[#ff6f61]"></div>
+            <div className="border border-[#ff6f61]"></div>
+          </label>
+          
+          <nav className="fixed border-l border-amber-50 w-3/4 h-lvh right-0 top-0 bg-[#ff6f61] z-100 md:relative md:block py-16 md:border-0 md:w-auto md:h-auto md:py-0">
+            <ul className="flex flex-col items-start text-left gap-6 md:block md:text-center" onClick={()=>setTimeout(()=>{
+              const checkBox = document.querySelector('#menu-button') as HTMLInputElement
+              checkBox.checked = false
+            })}>
               <li>
                 <a href="#inicio">Inicio</a>
               </li>
@@ -124,17 +137,13 @@ function App() {
             </li>
 
             <li>
-              <b>Zona Infantil:</b> Los más pequeños se divertirán en una amplia
-              piscina de bolas con tobogán, pared de pizarra, cama elástica,
-              casita de juegos, cocina, construcciones, corre pasillos y una
-              variedad de juguetes adaptados a todas las edades.
+              <b>Zona Infantil:</b> Ahora tenemos el gran parque de bolas con el trampolín, 
+              y un trampolín pequeño, y también mesas que se abren y recogen para los más pequeños
             </li>
 
             <li>
-              <b>Zona Comedor y Office:</b> Personaliza el mobiliario y la
-              decoración para que se adapten a tu evento. Equipado con nevera,
-              congelador, cafetera, microondas y una amplia encimera con
-              fregadero.
+              <b>Zona Comedor:</b> 4 mesas, 6 bancos, sillas, nevera, arcón, cafetera, microondas, horno, una barra con taburetes...
+              Y también en esta zona otra tele grande con altavoz conectaba a wifi.
             </li>
 
             <li>
@@ -294,6 +303,15 @@ function App() {
         <section id="redes">
         <h2>Redes</h2>
           <FacebookPage/>
+          <WhatsAppWidget 
+            className="prueba"
+            phoneNumber="34678174012"
+            message={`Hola, bienvenido! 👋🏼 \n\n¿Puedo ayudarte en algo?`}
+            sendButtonText="enviar"
+            inputPlaceHolder="Escribe un mensaje"
+            companyName="Sala Tokio"
+            replyTimeText="Normalmente responde en menos de hora."
+          />
         </section>
 
         <footer>
